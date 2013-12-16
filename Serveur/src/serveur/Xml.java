@@ -41,19 +41,9 @@ public class Xml
 		return Auteur;
 	}
 
-	public void setAuteur(String auteur)
-	{
-		this.Auteur = auteur;
-	}
-
 	public String getTitre()
 	{
 		return Titre;
-	}
-
-	public void setTitre(String titre)
-	{
-		this.Titre = titre;
 	}
 
 	public String getIsbn()
@@ -61,29 +51,9 @@ public class Xml
 		return Isbn;
 	}
 
-	public void setIsbn(String isbn)
-	{
-		this.Isbn = isbn;
-	}
-
 	public String getEditeur()
 	{
 		return Editeur;
-	}
-
-	public void setEditeur(String editeur)
-	{
-		Editeur = editeur;
-	}
-
-	public String getDescription()
-	{
-		return Description;
-	}
-
-	public void setDescription(String description)
-	{
-		Description = description;
 	}
 
 	public String getSujet()
@@ -91,18 +61,8 @@ public class Xml
 		return Sujet;
 	}
 
-	public void setSujet(String sujet)
-	{
-		Sujet = sujet;
-	}
-
 	public String getType()
 	{
 		return Type;
-	}
-
-	public void setType(String type)
-	{
-		Type = type;
 	}
 }

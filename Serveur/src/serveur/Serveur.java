@@ -79,17 +79,34 @@ public class Serveur
 		}
 	}
 
-	synchronized public void rechercherLivre()
+	synchronized public void rechercherLivre(String recherche, String type)
 	{
 		Serializer serializer = new Persister();
 		File source = new File("lure.xml");
 		try
 		{
 			Xml xml = serializer.read(Xml.class, source);
+
+			switch (type)
+			{
+			case "auteur":
+				break;
+			case "titre":
+				break;
+			case "isbn":
+				break;
+			case "editeur":
+				break;
+			case "sujet":
+				break;
+			case "type":
+				break;
+			}
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
+
 	}
 }
