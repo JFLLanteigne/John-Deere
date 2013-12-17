@@ -79,10 +79,11 @@ public class Serveur
 		}
 	}
 
-	synchronized public void rechercherLivre(String recherche, String type)
+	synchronized public String rechercherLivre(String recherche, String type)
 	{
 		Serializer serializer = new Persister();
-		File source = new File("lure.xml");
+		File source = new File("/src/CATA_BIBLIO.XML");
+		String reponse = "";
 		try
 		{
 			Xml xml = serializer.read(Xml.class, source);
@@ -90,16 +91,40 @@ public class Serveur
 			switch (type)
 			{
 			case "auteur":
+				if (xml.getAuteur() == recherche)
+				{
+					reponse = xml.getAuteur();
+				}
 				break;
 			case "titre":
+				if (xml.getTitre() == recherche)
+				{
+					reponse = xml.getTitre();
+				}
 				break;
 			case "isbn":
+				if (xml.getIsbn() == recherche)
+				{
+					reponse = xml.getIsbn();
+				}
 				break;
 			case "editeur":
+				if (xml.getEditeur() == recherche)
+				{
+					reponse = xml.getEditeur();
+				}
 				break;
 			case "sujet":
+				if (xml.getSujet() == recherche)
+				{
+					reponse = xml.getSujet();
+				}
 				break;
 			case "type":
+				if (xml.getType() == recherche)
+				{
+					reponse = xml.getType();
+				}
 				break;
 			}
 		}
@@ -107,6 +132,7 @@ public class Serveur
 		{
 			e.printStackTrace();
 		}
+		return reponse;
 
 	}
 }
